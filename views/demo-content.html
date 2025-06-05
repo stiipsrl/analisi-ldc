@@ -1,0 +1,633 @@
+<!-- Demo Container -->
+<div class="space-y-8">
+    <!-- Demo Introduction -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="border-l-4 brand-border pl-4 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Anteprima Web App Tracciamento Ordini</h2>
+            <p class="text-gray-600">
+                Questa demo mostra le interfacce principali della web app per Lorenzo del Carlo SPA, 
+                dal pannello amministrativo per la gestione ordini al portale pubblico per la consultazione 
+                da parte dei clienti, evidenziando l'integrazione con TeamSystem e il sistema di notifiche SMS.
+            </p>
+        </div>
+    </div>
+
+    <!-- Admin Dashboard Preview -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl">
+        <h3 class="text-white text-lg font-semibold mb-4">Pannello Amministrativo - Dashboard Ordini</h3>
+        
+        <!-- Browser Chrome -->
+        <div class="bg-gray-100 rounded-t-lg flex items-center p-3 space-x-2">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 bg-white rounded-full px-4 py-1 text-sm text-gray-600">
+                admin.lorenzodelcarlo.it/dashboard
+            </div>
+        </div>
+
+        <!-- Admin Interface -->
+        <div class="bg-gray-50 h-[700px] rounded-b-lg overflow-hidden">
+            <!-- Header -->
+            <div class="bg-white border-b px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold text-gray-800">Lorenzo del Carlo SPA</div>
+                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-600">Sistema Tracciamento Ordini</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                        <span class="material-icons-outlined text-sm">sync</span>
+                        <span>Sincronizza TeamSystem</span>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                        <span class="text-sm text-gray-600">Online</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-6 p-6 h-[calc(100%-76px)] overflow-y-auto">
+                <!-- Sidebar -->
+                <div class="col-span-3 bg-white rounded-lg shadow p-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2 p-2 bg-brand bg-opacity-10 rounded-lg text-gray-900">
+                            <span class="material-icons-outlined">dashboard</span>
+                            <span>Dashboard</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">assignment</span>
+                            <span>Ordini Attivi</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">colorize</span>
+                            <span>Zincatura</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">format_paint</span>
+                            <span>Verniciatura</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">sms</span>
+                            <span>Notifiche SMS</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">receipt</span>
+                            <span>Gestione DDT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="col-span-9 space-y-6">
+                    <!-- Stats -->
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">Ordini Attivi</span>
+                                <span class="material-icons-outlined text-blue-500">assignment</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">187</div>
+                            <div class="text-xs text-gray-500">di 200 max</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">In Zincatura</span>
+                                <span class="material-icons-outlined text-yellow-500">colorize</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">94</div>
+                            <div class="text-xs text-gray-500">fase attuale</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">In Verniciatura</span>
+                                <span class="material-icons-outlined text-green-500">format_paint</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">43</div>
+                            <div class="text-xs text-gray-500">seconda fase</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">SMS Inviati</span>
+                                <span class="material-icons-outlined text-purple-500">sms</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">2.847</div>
+                            <div class="text-xs text-gray-500">questo mese</div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Orders Table -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="flex justify-between items-center p-4 border-b">
+                            <h3 class="font-semibold text-gray-900">Ordini Recenti da TeamSystem</h3>
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-1 bg-green-100 text-green-800 rounded text-xs">
+                                    <span class="material-icons-outlined text-xs mr-1">check_circle</span>
+                                    SMS Inviato
+                                </span>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded text-xs">
+                                    <span class="material-icons-outlined text-xs mr-1">schedule</span>
+                                    In Lavorazione
+                                </span>
+                            </div>
+                        </div>
+                        <div class="overflow-x-auto">
+                            <table class="w-full">
+                                <thead class="bg-gray-50">
+                                    <tr>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Ordine</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Cliente</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Fase Attuale</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">DDT</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">SMS</th>
+                                        <th class="px-4 py-3 text-left text-xs font-medium text-gray-500 uppercase">Scadenza</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y divide-gray-200">
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 text-sm font-medium">ORD-2024-1247</td>
+                                        <td class="px-4 py-3 text-sm">Officina Metalli Rossi</td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">Zincatura</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm">DDT-4589</td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Inviato</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm text-gray-500">15 Gen 2025</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 text-sm font-medium">ORD-2024-1248</td>
+                                        <td class="px-4 py-3 text-sm">Ferro Battuto Milano</td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Verniciatura</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <button class="text-blue-600 hover:text-blue-800 text-xs">Inserisci DDT</button>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-green-100 text-green-800 rounded-full text-xs">Inviato</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm text-gray-500">18 Gen 2025</td>
+                                    </tr>
+                                    <tr class="hover:bg-gray-50">
+                                        <td class="px-4 py-3 text-sm font-medium">ORD-2024-1249</td>
+                                        <td class="px-4 py-3 text-sm">Carpenteria Bianchi</td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">Completato</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm">DDT-4591</td>
+                                        <td class="px-4 py-3 text-sm">
+                                            <span class="px-2 py-1 bg-purple-100 text-purple-800 rounded-full text-xs">Concluso</span>
+                                        </td>
+                                        <td class="px-4 py-3 text-sm text-gray-500">12 Gen 2025</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Customer Portal Preview -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl mt-8">
+        <h3 class="text-white text-lg font-semibold mb-4">Portale Cliente - Consultazione Stato Ordine</h3>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Mobile View -->
+            <div class="bg-gray-900 rounded-2xl p-2 shadow-2xl">
+                <div class="bg-white rounded-xl overflow-hidden h-[600px]">
+                    <!-- Mobile Header -->
+                    <div class="bg-brand px-4 py-3 text-center">
+                        <span class="text-gray-900 font-medium text-sm">Lorenzo del Carlo SPA</span>
+                        <div class="text-xs text-gray-700 mt-1">Tracciamento Ordine</div>
+                    </div>
+                    
+                    <!-- Order Info -->
+                    <div class="p-4 bg-gray-50 border-b">
+                        <div class="text-center">
+                            <div class="text-lg font-bold text-gray-900">ORD-2024-1247</div>
+                            <div class="text-sm text-gray-600">Officina Metalli Rossi</div>
+                            <div class="text-xs text-gray-500 mt-1">DDT: DDT-4589</div>
+                        </div>
+                    </div>
+
+                    <!-- Progress Timeline -->
+                    <div class="p-4 space-y-4">
+                        <h4 class="font-medium text-gray-800 text-sm">Stato Lavorazione</h4>
+                        
+                        <!-- Zincatura -->
+                        <div class="bg-white p-3 rounded-lg border border-yellow-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <span class="material-icons-outlined text-yellow-600 mr-2 text-sm">colorize</span>
+                                    <span class="font-medium text-sm">Zincatura</span>
+                                </div>
+                                <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">In Corso</span>
+                            </div>
+                            <div class="space-y-1 text-xs text-gray-600">
+                                <div class="flex justify-between">
+                                    <span>Inizio previsto:</span>
+                                    <span class="font-medium">10 Gen 2025</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Fine prevista:</span>
+                                    <span class="font-medium">15 Gen 2025</span>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-yellow-500 h-2 rounded-full" style="width: 60%"></div>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">Progresso: 60%</div>
+                            </div>
+                        </div>
+
+                        <!-- Verniciatura -->
+                        <div class="bg-white p-3 rounded-lg border border-gray-200">
+                            <div class="flex items-center justify-between mb-2">
+                                <div class="flex items-center">
+                                    <span class="material-icons-outlined text-gray-400 mr-2 text-sm">format_paint</span>
+                                    <span class="font-medium text-sm text-gray-500">Verniciatura</span>
+                                </div>
+                                <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">In Attesa</span>
+                            </div>
+                            <div class="space-y-1 text-xs text-gray-500">
+                                <div class="flex justify-between">
+                                    <span>Inizio previsto:</span>
+                                    <span>16 Gen 2025</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span>Fine prevista:</span>
+                                    <span>20 Gen 2025</span>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <div class="w-full bg-gray-200 rounded-full h-2">
+                                    <div class="bg-gray-300 h-2 rounded-full" style="width: 0%"></div>
+                                </div>
+                                <div class="text-xs text-gray-500 mt-1">Non iniziata</div>
+                            </div>
+                        </div>
+
+                        <!-- Info Box -->
+                        <div class="bg-blue-50 p-3 rounded-lg border border-blue-200">
+                            <div class="flex items-start">
+                                <span class="material-icons-outlined text-blue-600 mr-2 text-sm">info</span>
+                                <div class="text-xs text-blue-800">
+                                    <div class="font-medium mb-1">Informazioni</div>
+                                    <div>Riceverai un SMS quando la lavorazione sarà completata. Per informazioni aggiuntive puoi contattarci al numero verde.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Update -->
+                    <div class="bg-gray-50 px-4 py-2 border-t">
+                        <div class="text-xs text-gray-500 text-center">
+                            Ultimo aggiornamento: 12 Gen 2025 alle 14:30
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop View -->
+            <div class="bg-gray-100 rounded-lg">
+                <div class="bg-white rounded-lg h-[600px] overflow-hidden">
+                    <!-- Desktop Header -->
+                    <div class="bg-brand px-6 py-4 flex justify-between items-center">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900">Lorenzo del Carlo SPA</h3>
+                            <div class="text-sm text-gray-700">Sistema di Tracciamento Ordini</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-sm font-medium text-gray-900">Ordine: ORD-2024-1247</div>
+                            <div class="text-xs text-gray-700">Accesso tramite link SMS</div>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Content -->
+                    <div class="p-6 space-y-6">
+                        <!-- Customer Info -->
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h4 class="font-medium text-gray-800 mb-2">Dettagli Ordine</h4>
+                            <div class="grid grid-cols-2 gap-4 text-sm">
+                                <div>
+                                    <span class="text-gray-600">Cliente:</span>
+                                    <span class="font-medium ml-2">Officina Metalli Rossi</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">DDT:</span>
+                                    <span class="font-medium ml-2">DDT-4589</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Data Ordine:</span>
+                                    <span class="font-medium ml-2">8 Gen 2025</span>
+                                </div>
+                                <div>
+                                    <span class="text-gray-600">Consegna Prevista:</span>
+                                    <span class="font-medium ml-2">20 Gen 2025</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Process Timeline -->
+                        <div class="space-y-4">
+                            <h4 class="font-medium text-gray-800">Timeline Lavorazione</h4>
+                            
+                            <div class="relative">
+                                <!-- Timeline Line -->
+                                <div class="absolute left-6 top-8 bottom-0 w-0.5 bg-gray-200"></div>
+                                
+                                <!-- Zincatura Step -->
+                                <div class="flex items-start space-x-4 relative">
+                                    <div class="w-12 h-12 bg-yellow-500 rounded-full flex items-center justify-center relative z-10">
+                                        <span class="material-icons-outlined text-white text-sm">colorize</span>
+                                    </div>
+                                    <div class="flex-1 bg-yellow-50 p-4 rounded-lg border border-yellow-200">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-yellow-800">Zincatura</h5>
+                                            <span class="px-2 py-1 bg-yellow-100 text-yellow-800 rounded-full text-xs">In Corso</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-4 text-sm text-yellow-700">
+                                            <div>Inizio: 10 Gen 2025</div>
+                                            <div>Fine prevista: 15 Gen 2025</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Verniciatura Step -->
+                                <div class="flex items-start space-x-4 relative mt-4">
+                                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center relative z-10">
+                                        <span class="material-icons-outlined text-white text-sm">format_paint</span>
+                                    </div>
+                                    <div class="flex-1 bg-gray-50 p-4 rounded-lg border border-gray-200">
+                                        <div class="flex justify-between items-start mb-2">
+                                            <h5 class="font-medium text-gray-600">Verniciatura</h5>
+                                            <span class="px-2 py-1 bg-gray-100 text-gray-600 rounded-full text-xs">In Attesa</span>
+                                        </div>
+                                        <div class="grid grid-cols-2 gap-4 text-sm text-gray-500">
+                                            <div>Inizio previsto: 16 Gen 2025</div>
+                                            <div>Fine prevista: 20 Gen 2025</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SMS Notification Preview -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl mt-8">
+        <h3 class="text-white text-lg font-semibold mb-4">Sistema Notifiche SMS</h3>
+        
+        <!-- Phone Frame -->
+        <div class="mx-auto max-w-sm">
+            <div class="bg-gray-900 rounded-3xl p-3 shadow-2xl">
+                <!-- Phone Screen -->
+                <div class="bg-black rounded-2xl overflow-hidden h-[500px] flex flex-col">
+                    <!-- Status Bar -->
+                    <div class="bg-black text-white px-4 py-2 text-xs flex justify-between items-center">
+                        <span>9:41</span>
+                        <div class="flex items-center space-x-1">
+                            <span>●●●●</span>
+                            <span>📶</span>
+                            <span>🔋</span>
+                        </div>
+                    </div>
+
+                    <!-- Messages Header -->
+                    <div class="bg-gray-800 text-white px-4 py-3 flex items-center">
+                        <span class="material-icons-outlined mr-3">arrow_back</span>
+                        <div>
+                            <div class="font-medium">Lorenzo del Carlo</div>
+                            <div class="text-xs text-gray-300">+39 123 456 7890</div>
+                        </div>
+                    </div>
+
+                    <!-- Message Bubbles -->
+                    <div class="flex-1 bg-black p-4 space-y-4 overflow-y-auto">
+                        <!-- Notification Message -->
+                        <div class="flex justify-start">
+                            <div class="bg-gray-700 text-white p-3 rounded-lg max-w-xs">
+                                <div class="text-sm">
+                                    <strong>Lorenzo del Carlo SPA</strong><br><br>
+                                    Il tuo ordine ORD-2024-1247 è in lavorazione! 🔧<br><br>
+                                    Consulta lo stato in tempo reale:<br>
+                                    👉 <span class="text-blue-300 underline">https://track.lorenzodelcarlo.it/ord/abc123def</span><br><br>
+                                    Ti aggiorneremo quando sarà pronto! ✅
+                                </div>
+                                <div class="text-xs text-gray-400 mt-2">Oggi 10:15</div>
+                            </div>
+                        </div>
+
+                        <!-- Completion Message -->
+                        <div class="flex justify-start">
+                            <div class="bg-gray-700 text-white p-3 rounded-lg max-w-xs">
+                                <div class="text-sm">
+                                    <strong>Lorenzo del Carlo SPA</strong><br><br>
+                                    ✅ Il tuo ordine ORD-2024-1247 è completato!<br><br>
+                                    Puoi ritirare presso il nostro stabilimento negli orari: Lun-Ven 8:00-17:00<br><br>
+                                    Grazie per la fiducia! 🙏
+                                </div>
+                                <div class="text-xs text-gray-400 mt-2">Oggi 16:45</div>
+                            </div>
+                        </div>
+
+                        <!-- Auto-reply suggestion -->
+                        <div class="bg-gray-800 p-2 rounded-lg">
+                            <div class="text-xs text-gray-400 text-center">Risposte suggerite:</div>
+                            <div class="flex flex-wrap gap-1 mt-1">
+                                <button class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Grazie!</button>
+                                <button class="bg-gray-600 text-white px-2 py-1 rounded text-xs">Vengo domani</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Highlights -->
+    <div class="grid grid-cols-3 gap-6 mt-8">
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">schedule</span>
+                <h4 class="font-medium text-gray-900">Sincronizzazione Automatica</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Integrazione continua con TeamSystem per importazione automatica ordini e aggiornamento stati in tempo reale.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">sms</span>
+                <h4 class="font-medium text-gray-900">Notifiche Intelligenti</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Sistema SMS automatico con link sicuri per consultazione stato ordini senza necessità di registrazione.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">security</span>
+                <h4 class="font-medium text-gray-900">Accesso Sicuro</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Link temporanei con token univoci per garantire privacy e sicurezza nella consultazione dei dati ordine.
+            </p>
+        </div>
+    </div>
+
+    <!-- System Architecture -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+        <h3 class="text-lg font-semibold text-gray-800 mb-6">Architettura del Sistema</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div class="w-12 h-12 bg-blue-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="material-icons-outlined text-white">storage</span>
+                </div>
+                <h4 class="font-medium text-blue-800 mb-2">TeamSystem</h4>
+                <p class="text-sm text-blue-600">Gestionale esistente con ordini e fasi di lavorazione</p>
+            </div>
+            
+            <div class="text-center p-4 bg-green-50 rounded-lg border border-green-200">
+                <div class="w-12 h-12 bg-green-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="material-icons-outlined text-white">cloud</span>
+                </div>
+                <h4 class="font-medium text-green-800 mb-2">Web App</h4>
+                <p class="text-sm text-green-600">Sistema di tracciamento con database PostgreSQL e API REST</p>
+            </div>
+            
+            <div class="text-center p-4 bg-purple-50 rounded-lg border border-purple-200">
+                <div class="w-12 h-12 bg-purple-500 rounded-lg mx-auto mb-3 flex items-center justify-center">
+                    <span class="material-icons-outlined text-white">phone_android</span>
+                </div>
+                <h4 class="font-medium text-purple-800 mb-2">Cliente</h4>
+                <p class="text-sm text-purple-600">Portale web responsive e notifiche SMS automatiche</p>
+            </div>
+        </div>
+        
+        <!-- Data Flow -->
+        <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+            <h4 class="font-medium text-gray-800 mb-3">Flusso Dati</h4>
+            <div class="flex items-center justify-center space-x-4 text-sm">
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded">TeamSystem</span>
+                <span class="material-icons-outlined text-gray-400">arrow_forward</span>
+                <span class="px-3 py-1 bg-yellow-100 text-yellow-800 rounded">Sincronizzazione</span>
+                <span class="material-icons-outlined text-gray-400">arrow_forward</span>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded">Web App</span>
+                <span class="material-icons-outlined text-gray-400">arrow_forward</span>
+                <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded">SMS Cliente</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ROI Calculator -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+        <h3 class="text-lg font-semibold text-gray-800 mb-6">Calcolo ROI Previsto</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="space-y-4">
+                <h4 class="font-medium text-gray-800">Situazione Attuale</h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between p-3 bg-red-50 rounded border border-red-200">
+                        <span class="text-sm text-red-800">Chiamate telefoniche giornaliere</span>
+                        <span class="font-bold text-red-900">~50</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-red-50 rounded border border-red-200">
+                        <span class="text-sm text-red-800">Tempo medio per chiamata</span>
+                        <span class="font-bold text-red-900">3 min</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-red-50 rounded border border-red-200">
+                        <span class="text-sm text-red-800">Ore/giorno dedicate</span>
+                        <span class="font-bold text-red-900">2.5 ore</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-red-50 rounded border border-red-200">
+                        <span class="text-sm text-red-800">Costo mensile stimato</span>
+                        <span class="font-bold text-red-900">€2.800</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="space-y-4">
+                <h4 class="font-medium text-gray-800">Con la Web App</h4>
+                <div class="space-y-3">
+                    <div class="flex justify-between p-3 bg-green-50 rounded border border-green-200">
+                        <span class="text-sm text-green-800">Riduzione chiamate</span>
+                        <span class="font-bold text-green-900">-80%</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-green-50 rounded border border-green-200">
+                        <span class="text-sm text-green-800">Chiamate rimanenti</span>
+                        <span class="font-bold text-green-900">~10/giorno</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-green-50 rounded border border-green-200">
+                        <span class="text-sm text-green-800">Ore/giorno liberate</span>
+                        <span class="font-bold text-green-900">2 ore</span>
+                    </div>
+                    <div class="flex justify-between p-3 bg-green-50 rounded border border-green-200">
+                        <span class="text-sm text-green-800">Risparmio mensile</span>
+                        <span class="font-bold text-green-900">€2.240</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="mt-6 p-4 bg-brand bg-opacity-10 rounded-lg border border-[#FCD415]">
+            <div class="text-center">
+                <h4 class="font-bold text-gray-800 mb-2">ROI Annuale Stimato</h4>
+                <div class="text-3xl font-bold text-green-600 mb-2">€26.880</div>
+                <p class="text-sm text-gray-600">Risparmio annuale in costi del personale dedicato alle chiamate</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Implementation Timeline -->
+    <div class="bg-white rounded-xl shadow-md p-6 mt-8">
+        <h3 class="text-lg font-semibold text-gray-800 mb-6">Timeline di Implementazione</h3>
+        <div class="space-y-4">
+            <div class="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+                <div class="w-8 h-8 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">1</div>
+                <div class="flex-1">
+                    <h4 class="font-medium text-blue-800">Sprint 1 - Core System (Settimana 1)</h4>
+                    <p class="text-sm text-blue-600">Setup infrastruttura, integrazione TeamSystem, pannello amministrativo</p>
+                </div>
+                <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-xs">5 giorni</span>
+            </div>
+            
+            <div class="flex items-center p-4 bg-green-50 rounded-lg border border-green-200">
+                <div class="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">2</div>
+                <div class="flex-1">
+                    <h4 class="font-medium text-green-800">Sprint 2 - SMS & Portal (Settimana 2)</h4>
+                    <p class="text-sm text-green-600">Sistema notifiche SMS, portale cliente, link sicuri</p>
+                </div>
+                <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-xs">5 giorni</span>
+            </div>
+            
+            <div class="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-200 opacity-60">
+                <div class="w-8 h-8 bg-purple-300 rounded-full flex items-center justify-center text-white font-bold text-sm mr-4">3</div>
+                <div class="flex-1">
+                    <h4 class="font-medium text-purple-600">Sprint 3 - Area Riservata (Opzionale)</h4>
+                    <p class="text-sm text-purple-500">Registrazione clienti, storico ordini, WhatsApp integration</p>
+                </div>
+                <span class="px-3 py-1 bg-purple-100 text-purple-600 rounded-full text-xs">Opzionale</span>
+            </div>
+        </div>
+        
+        <div class="mt-6 text-center">
+            <div class="inline-flex items-center px-4 py-2 bg-brand rounded-lg">
+                <span class="material-icons-outlined text-gray-900 mr-2">schedule</span>
+                <span class="font-medium text-gray-900">Tempo totale: 2 settimane (+ 1 opzionale)</span>
+            </div>
+        </div>
+    </div>
+</div>
